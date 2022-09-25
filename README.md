@@ -1,9 +1,9 @@
 
-# İNEK MÜZİK BOTUMUZ 🇹🇷
+# İNEK MÜZİK  🇹🇷
 - [Müzik Bot](https://t.me/inekobasiTR) Telegram Gurup .
 
 # İNEK GURUBUMUZ 
-- [BALLAS GURUP](https://t.me/inekobasiTR) Telegram Grub .
+- [İNEK GURUP](https://t.me/inekobasiTR) Telegram Grub .
 
 
 ### ⏳ Komutlar
