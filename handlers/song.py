@@ -1,4 +1,4 @@
-# Telegramda yani ben boş işler müdürü :) <> @Hayiboo Tarafından düzenlenen ufak çaplı proje. 
+# Telegramda yani ben boş işler müdürü :) <> @uslanmazmurti Tarafından düzenlenen ufak çaplı proje. 
 import os
 import requests
 import aiohttp
