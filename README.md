@@ -32,3 +32,9 @@
 
 ### SAHİP 
 (https://t.me/uslanmazmurti)
+
+### gurup sahip 
+(https://t.me/hasankayakarakus)
+
+### Y KURUCU
+(https://t.me/akillanmazadam)
