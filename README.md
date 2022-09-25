@@ -1,9 +1,9 @@
 
-# BALLAS MÜZİK BOTUMUZ 🇹🇷
-- [Müzik Bot](https://t.me/Ballas_music_bot) Telegram Müzik Bot .
+# İNEK MÜZİK BOTUMUZ 🇹🇷
+- [Müzik Bot](https://t.me/inekobasiTR) Telegram Gurup .
 
-# BALLAS GURUBUMUZ 
-- [BALLAS GURUP](https://t.me/Ballasresmi) Telegram Grub .
+# İNEK GURUBUMUZ 
+- [BALLAS GURUP](https://t.me/inekobasiTR) Telegram Grub .
 
 
 ### ⏳ Komutlar
@@ -26,9 +26,9 @@
 -
 
 
-### BALLAS MÜZİK BOTU
+### İNEK GURUP
 
-(https://t.me/Ballasresmi)
+(https://t.me/inekobasiTR)
 
 ### SAHİP 
-(https://t.me/BOT_RAMO)
+(https://t.me/uslanmazmurti)
