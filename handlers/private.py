@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-# İnek Müzik tarafından düzenlendi. 
+# Ballas Müzik tarafından düzenlendi. 
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
@@ -14,7 +14,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🎉 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🎉", url=f"https://t.me/inekobasiTR?startgroup=true"
+                        "🎉 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🎉", url=f"https://t.me/Ballasplayerbot?startgroup=true"
                     )
                 ],
                 [
@@ -22,12 +22,12 @@ async def start(_, message: Message):
                         "📚 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋" , callback_data= "herkes"
                     ),
                     InlineKeyboardButton(
-                        "🇹🇷 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/inekobasiTR"
+                        "🇹🇷 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Ballasresmi"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 Gurup linki 🧑🏻‍💻", url="https://t.me/inekobasiTR"
+                        "🧑🏻‍💻 Gurup linki 🧑🏻‍💻", url="https://t.me/Ballasresmi"
                     )
                 ]
                 
@@ -44,10 +44,10 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🇹🇷 𝖠𝗌𝗂𝗌𝗍𝖺𝗇", url="https://t.me/musicasistan1"
+                         "🇹🇷 𝖠𝗌𝗂𝗌𝗍𝖺𝗇", url="https://t.me/Ballasplayerbotasistan"
                      ),
                      InlineKeyboardButton(
-                         "🧑🏻‍💻 𝖮𝗐𝗇𝖾𝗋", url="https://t.me/uslanmazmurti"
+                         "🧑🏻‍💻 𝖮𝗐𝗇𝖾𝗋", url="https://t.me/BOT_RAMO"
                      )
                  ],
                  [
@@ -67,7 +67,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "🎉 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🎉", url=f"https://t.me/inekobasiTR?startgroup=true"
+                        "🎉 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🎉", url=f"https://t.me/Ballasplayerbot?startgroup=true"
                     )
                 ],
                 [
@@ -75,12 +75,12 @@ async def cbstart(_, query: CallbackQuery):
                         "📚 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋" , callback_data= "herkes"
                     ),
                     InlineKeyboardButton(
-                        "🇹🇷 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url=f"https://t.me/inekobasiTR"
+                        "🇹🇷 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url=f"https://t.me/Ballasresmi"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 ɢurup lnki 🧑🏻‍💻", url="https://t.me/uslanmazmurti"
+                        "🧑🏻‍💻 ɢurup lnki 🧑🏻‍💻", url="https://t.me/BOT_RAMO"
                     )
                 ]
                 
