@@ -152,7 +152,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+        thumb_name = "https://i.ibb.co/9w7CwQ5/Logopit-1663987970479.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Yerel olarak eklendi"
@@ -198,13 +198,13 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🐄 İNEK OBASI TR", url=f"https://t.me/inekobasiTR"),
+                InlineKeyboardButton("BALLAS GURUBU", url=f"https://t.me/Ballasresmi"),
             ],
         ]
     )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+            thumb_name = "https://i.ibb.co/9w7CwQ5/Logopit-1663987970479.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -260,7 +260,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🐄 İNEK OBASI TR ", url=f"https://t.me/inekobasiTR"),
+                InlineKeyboardButton("BALLAS GURUBU ", url=f"https://t.me/Ballasresmi"),
             ],
         ]
     )
