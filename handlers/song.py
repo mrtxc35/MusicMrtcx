@@ -27,7 +27,7 @@ def bul(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("•> **Arıyorum...**")
+    m = message.reply("**Arıyorum..**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
@@ -45,17 +45,17 @@ def bul(client, message):
 
     except Exception as e:
         m.edit(
-            "•> **Hiçbir şey bulamadım .**"
+            "**Hiçbir şey Bulunamadı.**"
         )
         print(str(e))
         return
-    m.edit("•> **Şarkı indiriliyor .**")
+    m.edit("**Şarkı İndiriyorum.**")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"▶️ **Şarkı**: [{title[:35]}]({link})\n⏳ **Süre**: `{duration}`\n•> [Ballas 𝖬𝗎𝗓𝗂𝗄 𝖡𝗈𝗍](https://t.me/Ballasresmi) 𝖳𝖺𝗋𝖺𝖿𝗂𝗇𝖽𝖺𝗇 !"
+        rep = f"▶️ **Şarkı**: [{title[:35]}]({link})\n⏳ **Süre**: `{duration}`\nAraştıran [Vahsi Muzik Bot](https://t.me/VahsiMuzikBot)"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -70,7 +70,7 @@ def bul(client, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ Error")
+        m.edit("❌ Hata")
         print(e)
 
     try:
