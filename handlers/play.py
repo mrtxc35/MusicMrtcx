@@ -94,7 +94,7 @@ async def cls(_, query: CallbackQuery):
 
 # EfsaneMusicVaves düzenlenmiştir.
 
-@Client.on_message(command(["play", "oynat"]) 
+@Client.on_message(command(["cal", "oynat"]) 
                    & filters.group
                    & ~filters.edited 
                    & ~filters.forwarded
@@ -133,7 +133,7 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🔵 Hata 🔵</b> \n\Merhaba {user.first_name}, Asistan, yoğun katılma istekleri nedeniyle grubunuza katılamadı. Asistanin grupta yasaklı olmadığından emin olun ve daha sonra yeniden deneyin!")
+                        f"<b>⛔ Hata ⛔</b> \n\Merhaba {user.first_name}, Asistan, Bu Sohbetten Yasaklanmış Olabilir\nBanını Kaldırmayı Deneyin\n\nAsistan Kullanıcı Adı: @VahsiMuzikAsistan1")
     try:
         await USER.get_chat(chid)
     except:
@@ -198,7 +198,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("BALLAS GURUBU", url=f"https://t.me/Ballasresmi"),
+                InlineKeyboardButton("💯 Support", url=f"https://t.me/GalaSohbet"),
             ],
         ]
     )
@@ -218,7 +218,7 @@ async def play(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"•> **Daha uzun videolar {DURATION_LIMIT} dakikaların oynatılamasına izin verilmez**!")
+             await lel.edit(f"•> **Daha uzun videolara {DURATION_LIMIT} izin verilmez**!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
@@ -260,7 +260,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("BALLAS GURUBU ", url=f"https://t.me/Ballasresmi"),
+                InlineKeyboardButton("💯 Support", url=f"https://t.me/GalaSohbet"),
             ],
         ]
     )
