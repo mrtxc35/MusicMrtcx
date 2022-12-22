@@ -1,4 +1,4 @@
-# Telegramda yani ben boş işler müdürü :) <> @BOT_RAMO Tarafından düzenlenen ufak çaplı proje. 
+# Telegramda yani ben boş işler müdürü :) <> Murti Tarafından düzenlenen ufak çaplı proje. 
 import os
 import requests
 import aiohttp
@@ -18,7 +18,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["bul"]))
+@Client.on_message(command(["ara"]))
 def bul(client, message):
 
     user_id = message.from_user.id
@@ -80,7 +80,7 @@ def bul(client, message):
         print(e)
 
 @Client.on_message(
-    command(["vbul", "vsong"]) & ~filters.edited
+    command(["vbul", "vara"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
