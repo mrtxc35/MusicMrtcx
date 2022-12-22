@@ -18,59 +18,43 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["ara"]))
-def bul(client, message):
 
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
-    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
-
-    query = "".join(" " + str(i) for i in message.command[1:])
-    print(query)
-    m = message.reply("**Arıyorum..**")
-    ydl_opts = {"format": "bestaudio[ext=m4a]"}
+@bot.on_message(filters.command("ara") & ~filters.edited)
+def bul(_, message):
+    query = " ".join(message.command[1:])
+    m = message.reply("🔎")
+    ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
-        results = YoutubeSearch(query, max_results=5).to_dict()
+        results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
-        # print(results)
         title = results[0]["title"][:40]
         thumbnail = results[0]["thumbnails"][0]
-        thumb_name = f"thumb{title}.jpg"
+        thumb_name = f"{title}.jpg"
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
-
         duration = results[0]["duration"]
-        url_suffix = results[0]["url_suffix"]
-        views = results[0]["views"]
 
     except Exception as e:
-        m.edit(
-            "**Hiçbir şey Bulunamadı.**"
-        )
+        m.edit("<b>⛔ **Üzgünüm Şarkıyı Bulamadım.**</b>")
         print(str(e))
         return
-    m.edit("**Şarkı İndiriyorum.**")
+    m.edit("<b>•> **İndirme Başlatıldı...**</b>")
     try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
         rep = f"▶️ **Şarkı**: [{title[:35]}]({link})\n⏳ **Süre**: `{duration}`\nAraştıran [Vahsi Muzik Bot](https://t.me/VahsiMuzikBot)"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
-            dur += int(dur_arr[i]) * secmul
+            dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        message.reply_audio(
-            audio_file,
-            caption=rep,
-            thumb=thumb_name,
-            parse_mode="md",
-            title=title,
-            duration=dur,
-        )
+        m.edit("•> **Yüklüyorum**...")
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@uslanmazmurti")
         m.delete()
+        bot.send_audio(chat_id=-1001820185928, audio=audio_file, caption=rep, performer="@uslanmazmurti", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
-        m.edit("❌ Hata")
+        m.edit("<b>⛔ **Hata Bekle Ve Tekrar Dene** .</b>")
         print(e)
 
     try:
@@ -78,6 +62,7 @@ def bul(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+ 
 
 @Client.on_message(
     command(["vbul", "vara"]) & ~filters.edited
