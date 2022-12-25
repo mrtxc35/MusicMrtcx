@@ -19,7 +19,7 @@ def time_to_seconds(time):
 
 
 
-@bot.on_message(filters.command("ara") & ~filters.edited)
+@bot.on_message(filters.command("indir") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("🔎")
@@ -65,7 +65,7 @@ def bul(_, message):
  
 
 @Client.on_message(
-    command(["vbul", "vara"]) & ~filters.edited
+    command(["vbul", "vindir"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
