@@ -20,21 +20,21 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "Sesmusic Asistan"
+        user.first_name =  "VahsiMuzik Asistan"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id,"•> **Senin İsteğin Üzerine Geldim** !")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>Asistan Zaten Grupta Var</b>",
+            "<b>Asistan Zaten Grupta!</b>",
         )
         pass
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🔵 Hata 🔵\n User {user.first_name} userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun."
-            "\n\n Yada Asistan Hesabını Gruba Kendin Ekle </b>",
+            f"<b>⛔ Hata ⛔\nAsistanın grupta yasaklanmadığından emin olun."
+            "\n\n Yada Asistan Hesabını Gruba Kendin Ekle\n\nAsistan Adı: @VahsiMuzikAsistan1\nAsistan Kimliği: 5620230571</b>",
         )
         return
     await message.reply_text(
